@@ -53,3 +53,23 @@ EduSpark currently uses a rule-based recommendation system:
 ## Project Status
 
 Milestone 1 – Minimum Viable Product (MVP)
+## Project Inspiration
+
+Inspired by the Antler NEXT100 opportunity:
+AI-Powered Adaptive Learning: Bridging Educational Gaps in India.
+
+Reference: https://www.theoryofnext.com/next100
+
+## How to Run Locally
+
+1. Clone the repository.
+2. Open the project folder in VS Code.
+3. Install dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm run dev
+
+5. Open http://localhost:3000 in your browser.
