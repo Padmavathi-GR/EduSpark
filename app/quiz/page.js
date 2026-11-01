@@ -6,6 +6,7 @@ import { useProgress } from "../context/ProgressContext";
 
 export default function Quiz() {
   const { recordQuiz } = useProgress();
+
   const questions = [
     {
       question: "What is a variable?",
@@ -41,8 +42,17 @@ export default function Quiz() {
       (q, index) => selected[index] === q.answer
     ).length;
 
+    const review = questions.map((q, index) => ({
+      question: q.question,
+      selectedAnswer: q.options[selected[index]],
+      correctAnswer: q.options[q.answer],
+      isCorrect: selected[index] === q.answer,
+    }));
+
     localStorage.setItem("quizScore", score);
     localStorage.setItem("quizTotal", questions.length);
+    localStorage.setItem("quizSubject", "Programming Basics");
+    localStorage.setItem("quizReview", JSON.stringify(review));
 
     recordQuiz(score, questions.length);
     window.location.href = "/results";
@@ -85,7 +95,6 @@ export default function Quiz() {
                     })
                   }
                 />
-
                 {option}
               </label>
             ))}
