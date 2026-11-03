@@ -48,7 +48,7 @@ EduSpark currently uses a rule-based recommendation system:
 
 - Padmavathi G R
 - Raksha L Pai
-- Jaanvi
+- Janavi
 
 ## Project Status
 
